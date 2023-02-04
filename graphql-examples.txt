@@ -1,0 +1,50 @@
+
+# create new user  
+ mutation {
+   addUser(input:{
+     FirstName: "Bonnie",
+     LastName: "Tyler"
+   })
+     {Id,
+     FirstName,
+     LastName
+   }
+ }
+
+#get user by id
+query { 
+  user(Id : "61b8c6580162066c5450d525" ){
+    Id,
+    FirstName,
+    LastName
+  }
+}
+
+#get all users
+ query { 
+   users{
+     Id,
+     FirstName,
+     LastName
+   }
+ }
+
+#update user
+ mutation {
+   updateUser(
+     Id: "61b8ce00ddb5fe515d1531c9",
+     FirstName: "Johnny",
+     LastName: "Cash"
+   )
+     {Id,
+     FirstName,
+     LastName
+   }
+ }
+
+# delete user by id
+mutation {
+ deleteUser(
+    Id: "61b8cb5d968fb686922ac693"
+  )
+}
